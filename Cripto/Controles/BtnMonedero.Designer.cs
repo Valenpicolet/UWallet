@@ -55,7 +55,6 @@
             this.PnlMonedero.Padding = new System.Windows.Forms.Padding(4);
             this.PnlMonedero.Size = new System.Drawing.Size(250, 150);
             this.PnlMonedero.TabIndex = 0;
-            this.PnlMonedero.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlMonedero_Paint);
             // 
             // LblAbreviatura
             // 

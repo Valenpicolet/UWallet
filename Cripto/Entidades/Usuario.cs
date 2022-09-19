@@ -29,5 +29,10 @@ namespace Pav.Entidades
             this.perfil = perfil;
             this.fecha_alta = fecha_alta;
         }
+
+        public Usuario(string nombre)
+        {
+            this.nombre = nombre;
+        }
     }
 }

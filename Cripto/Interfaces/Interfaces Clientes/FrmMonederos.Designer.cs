@@ -49,10 +49,12 @@
             // 
             // FlpanelMonederos
             // 
+            this.FlpanelMonederos.AutoScroll = true;
             this.FlpanelMonederos.BackColor = System.Drawing.Color.White;
-            this.FlpanelMonederos.Location = new System.Drawing.Point(105, 195);
+            this.FlpanelMonederos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FlpanelMonederos.Location = new System.Drawing.Point(0, 306);
             this.FlpanelMonederos.Name = "FlpanelMonederos";
-            this.FlpanelMonederos.Size = new System.Drawing.Size(756, 436);
+            this.FlpanelMonederos.Size = new System.Drawing.Size(1000, 436);
             this.FlpanelMonederos.TabIndex = 0;
             // 
             // BtnMinimizar
@@ -92,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1000, 742);
             this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.BtnCerrar);

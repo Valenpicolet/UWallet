@@ -26,7 +26,7 @@ namespace Cripto.Interfaces.Interfaces_Clientes
         private void GenerarBotonesDinamicos()
         {
             FlpanelMonederos.Controls.Clear();
-            var listaControles = new List<BtnMonedero>; 
+            BtnMonedero[] listaMonedederos = new BtnMonedero[2]; 
         }
         #endregion
 

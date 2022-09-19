@@ -5,7 +5,7 @@
         #region Atributos
         private Usuario usuario;
         private Criptomoneda cripto;
-        private int monto;
+        private int saldo;
         #endregion
 
         #region Accesores
@@ -17,11 +17,11 @@
         public int getMonto() { return this.monto; }
         #endregion
 
-        public Monedero(Usuario usuario, Criptomoneda cripto)
+        public Monedero(Usuario usuario, Criptomoneda cripto, int saldo)
         {
             this.usuario = usuario;
             this.cripto = cripto;
-            this.monto = 0;
+            this.saldo = 0;
         }
     }
 }

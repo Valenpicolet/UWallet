@@ -17,11 +17,11 @@
         public void setCantidad(int cantidad) { this.cantidad = cantidad; }
         #endregion
 
-        public Criptomoneda(string nombre,string abreviacion,int cantidad) 
+        public Criptomoneda(string nombre,string abreviacion) // int cantidad
         { 
             this.nombre = nombre;
             this.abreviacion = abreviacion;
-            this.cantidad = cantidad;
+           // this.cantidad = cantidad;
         }
 
     }
