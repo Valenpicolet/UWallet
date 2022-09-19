@@ -34,11 +34,6 @@ namespace Cripto
         }
 
 
-        private void BtnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
 

@@ -27,6 +27,10 @@ namespace Cripto.Interfaces.Interfaces_Clientes
             this.PnlPpal.Controls.Add(frm);
             this.PnlPpal.Tag = form;
             frm.Show();
+        } 
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            SdwFrmPrincipal.SetShadowForm(this);
         }
         private void BtnCotizaciones_Click(object sender, EventArgs e)
         {
@@ -62,5 +66,7 @@ namespace Cripto.Interfaces.Interfaces_Clientes
         {
 
         }
+
+       
     }
 }

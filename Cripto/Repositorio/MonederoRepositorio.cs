@@ -11,24 +11,24 @@ namespace Cripto.Repositorio
 {
     public class MonederoRepositorio
     {
-        public List<Monederos> GetMonederos()
+        public List<Monedero> GetMonederos()
         {
-            var monederos = new List<Monederos>();
+            var monederos = new List<Monedero>();
             var sql = $"SELECT m.* FROM Monederos m";
             var tablaResultados = DBHelper.GetDBHelper().ConsultaSQL(sql);
 
             foreach (DataRow fila in tablaResultados.Rows)
             {
-                var _monedero = new Monederos();
-                // Info Cripto Moneda
-                _monedero.Id_cripto = Convert.ToInt64(fila["id_cripto"].ToString());
+                //var _monedero = new Monedero();
+                //// Info Cripto Moneda
+                //_monedero.Id_cripto = Convert.ToInt64(fila["id_cripto"].ToString());
 
-                // Info Usuario
-                _monedero.Id_usuario = Convert.ToInt64(fila["id_usuario"].ToString());
-                _monedero.Saldo = Convert.ToInt64(fila["saldo"].ToString());
+                //// Info Usuario
+                //_monedero.Id_usuario = Convert.ToInt64(fila["id_usuario"].ToString());
+                //_monedero.Saldo = Convert.ToInt64(fila["saldo"].ToString());
                 
 
-                monederos.Add(_monedero);
+                //monederos.Add(_monedero);
             }
             return monederos;
 

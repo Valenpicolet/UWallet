@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCotizaciones));
             this.DragControlFrmCotizacion = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SdwFrmCotizacion = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -46,6 +47,8 @@
             this.Abreviatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cotización = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnMinimizar = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnCerrar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCotizaciones)).BeginInit();
@@ -244,11 +247,46 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             // 
+            // BtnMinimizar
+            // 
+            this.BtnMinimizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnMinimizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnMinimizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnMinimizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnMinimizar.FillColor = System.Drawing.Color.Transparent;
+            this.BtnMinimizar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.BtnMinimizar.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.BtnMinimizar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
+            this.BtnMinimizar.Location = new System.Drawing.Point(913, 1);
+            this.BtnMinimizar.Name = "BtnMinimizar";
+            this.BtnMinimizar.Size = new System.Drawing.Size(39, 30);
+            this.BtnMinimizar.TabIndex = 5;
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnCerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnCerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnCerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnCerrar.FillColor = System.Drawing.Color.Transparent;
+            this.BtnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnCerrar.ForeColor = System.Drawing.Color.White;
+            this.BtnCerrar.HoverState.FillColor = System.Drawing.Color.Red;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(958, 1);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(39, 30);
+            this.BtnCerrar.TabIndex = 6;
+            // 
             // FrmCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 742);
+            this.Controls.Add(this.BtnMinimizar);
+            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.DgvCotizaciones);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -275,6 +313,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Abreviatura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cotización;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private Guna.UI2.WinForms.Guna2Button BtnMinimizar;
+        private Guna.UI2.WinForms.Guna2Button BtnCerrar;
     }
 }
 

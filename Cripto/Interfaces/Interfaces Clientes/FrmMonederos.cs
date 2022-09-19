@@ -16,5 +16,10 @@ namespace Cripto.Interfaces.Interfaces_Clientes
         {
             InitializeComponent();
         }
+
+        private void FrmMonederos_Load(object sender, EventArgs e)
+        {
+            SdwFrmMonederos.SetShadowForm(this);
+        }
     }
 }

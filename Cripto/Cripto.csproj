@@ -107,12 +107,14 @@
     <Compile Include="Repositorio\CotizacionesRepositorio.cs" />
     <Compile Include="Repositorio\DBHelper.cs" />
     <Compile Include="Repositorio\MonederoRepositorio.cs" />
-    <Compile Include="Servicios\MonederosServicio.cs" />
     <EmbeddedResource Include="Controles\BtnMonedero.resx">
       <DependentUpon>BtnMonedero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmCotizaciones.resx">
       <DependentUpon>FrmCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmMonederos.resx">
+      <DependentUpon>FrmMonederos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

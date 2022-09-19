@@ -1,4 +1,6 @@
-﻿namespace Pav.Entidades
+﻿using System;
+
+namespace Pav.Entidades
 {
     public class Usuario
     {

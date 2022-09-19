@@ -232,9 +232,9 @@
             this.BtnMinimizar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnMinimizar.ForeColor = System.Drawing.Color.White;
             this.BtnMinimizar.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.BtnMinimizar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.BtnMinimizar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
-            this.BtnMinimizar.Location = new System.Drawing.Point(898, 0);
+            this.BtnMinimizar.Location = new System.Drawing.Point(916, 3);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.Size = new System.Drawing.Size(39, 30);
             this.BtnMinimizar.TabIndex = 3;
@@ -250,7 +250,7 @@
             this.BtnCerrar.ForeColor = System.Drawing.Color.White;
             this.BtnCerrar.HoverState.FillColor = System.Drawing.Color.Red;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(943, 0);
+            this.BtnCerrar.Location = new System.Drawing.Point(961, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(39, 30);
             this.BtnCerrar.TabIndex = 4;
@@ -259,10 +259,12 @@
             // PnlPpal
             // 
             this.PnlPpal.Controls.Add(this.LblInfo);
+            this.PnlPpal.Controls.Add(this.BtnMinimizar);
             this.PnlPpal.Controls.Add(this.LblBienvenida);
+            this.PnlPpal.Controls.Add(this.BtnCerrar);
             this.PnlPpal.Location = new System.Drawing.Point(196, 0);
             this.PnlPpal.Name = "PnlPpal";
-            this.PnlPpal.Size = new System.Drawing.Size(803, 742);
+            this.PnlPpal.Size = new System.Drawing.Size(1000, 739);
             this.PnlPpal.TabIndex = 5;
             this.PnlPpal.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlPpal_Paint);
             // 
@@ -271,7 +273,7 @@
             this.LblBienvenida.AutoSize = true;
             this.LblBienvenida.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBienvenida.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.LblBienvenida.Location = new System.Drawing.Point(148, 118);
+            this.LblBienvenida.Location = new System.Drawing.Point(266, 118);
             this.LblBienvenida.Name = "LblBienvenida";
             this.LblBienvenida.Size = new System.Drawing.Size(356, 45);
             this.LblBienvenida.TabIndex = 0;
@@ -282,7 +284,7 @@
             this.LblInfo.AutoSize = true;
             this.LblInfo.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LblInfo.Location = new System.Drawing.Point(105, 182);
+            this.LblInfo.Location = new System.Drawing.Point(213, 183);
             this.LblInfo.Name = "LblInfo";
             this.LblInfo.Size = new System.Drawing.Size(574, 21);
             this.LblInfo.TabIndex = 1;
@@ -302,15 +304,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 742);
+            this.ClientSize = new System.Drawing.Size(1200, 742);
             this.Controls.Add(this.PnlMenu);
-            this.Controls.Add(this.BtnMinimizar);
-            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.PnlPpal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.PnlMenu.ResumeLayout(false);
             this.PnlPpal.ResumeLayout(false);
