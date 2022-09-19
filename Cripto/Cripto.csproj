@@ -157,6 +157,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="file.txt" />
     <Content Include="Recursos\BTN_icono.png" />
     <Content Include="Recursos\back_grey.png" />
     <Content Include="Recursos\back_white.png" />
