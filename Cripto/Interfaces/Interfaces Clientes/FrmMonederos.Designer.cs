@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMonederos));
             this.SdwFrmMonederos = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.DragControlFrmMonederos = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlpanelMonederos = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnMinimizar = new Guna.UI2.WinForms.Guna2Button();
             this.BtnCerrar = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -47,13 +47,13 @@
             this.DragControlFrmMonederos.TargetControl = this;
             this.DragControlFrmMonederos.UseTransparentDrag = true;
             // 
-            // flowLayoutPanel1
+            // FlpanelMonederos
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(105, 195);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(756, 436);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.FlpanelMonederos.BackColor = System.Drawing.Color.White;
+            this.FlpanelMonederos.Location = new System.Drawing.Point(105, 195);
+            this.FlpanelMonederos.Name = "FlpanelMonederos";
+            this.FlpanelMonederos.Size = new System.Drawing.Size(756, 436);
+            this.FlpanelMonederos.TabIndex = 0;
             // 
             // BtnMinimizar
             // 
@@ -95,7 +95,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 742);
             this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.BtnCerrar);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.FlpanelMonederos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMonederos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -109,7 +109,7 @@
 
         private Guna.UI2.WinForms.Guna2ShadowForm SdwFrmMonederos;
         private Guna.UI2.WinForms.Guna2DragControl DragControlFrmMonederos;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel FlpanelMonederos;
         private Guna.UI2.WinForms.Guna2Button BtnMinimizar;
         private Guna.UI2.WinForms.Guna2Button BtnCerrar;
     }

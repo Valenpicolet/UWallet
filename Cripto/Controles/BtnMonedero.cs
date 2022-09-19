@@ -12,23 +12,32 @@ namespace Cripto
 {
     public partial class BtnMonedero : UserControl
     {
-        public string MonederoID { get; set; }
+        # region Get & Set para Labels y Picture Box.
+        private Image _icon;
+        private string _nombre;
+        private string _abreviatura;
+        private string _cantidadUsd;
         public string ItemNombre
         {
-            get { return LblNombre.Text; }
-            set { LblNombre.Text = value; }
+            get { return _nombre; }
+            set { _nombre = value; LblNombre.Text = value; }
         }
         public string ItemAbreviatura
         {
-            get { return LblAbreviatura.Text; }
-            set { LblAbreviatura.Text = value; }
+            get { return _abreviatura; }
+            set {_abreviatura = value; LblAbreviatura.Text = value; }
         }        
         public string ItemCantidad
         {
-            get { return LblCantidadUsd.Text; }
-            set { LblCantidadUsd.Text = value; }
+            get { return _cantidadUsd; }
+            set {_cantidadUsd = value; LblCantidadUsd.Text = value; }
         }
-        
+        public Image Icono 
+        {
+            get { return _icon; }
+            set { _icon = value; PbIcono.Image = value; }
+        }
+        # endregion
 
         public BtnMonedero()
         {
@@ -41,5 +50,13 @@ namespace Cripto
             
         }
 
+
+        private void PnlMonedero_Paint(object sender, PaintEventArgs e)
+        {
+            this.PnlMonedero.FillColor = Color.FromArgb(225, 255, 255);
+            this.PnlMonedero.FillColor2 = Color.FromArgb(0, 125, 255);
+
+
+        }
     }
 }

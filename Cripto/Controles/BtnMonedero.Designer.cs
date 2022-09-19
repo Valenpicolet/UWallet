@@ -34,12 +34,15 @@
             this.LblCantidadUsd = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.guna2TaskBarProgress1 = new Guna.UI2.WinForms.Guna2TaskBarProgress(this.components);
+            this.PbIcono = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.PnlMonedero.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlMonedero
             // 
             this.PnlMonedero.BorderRadius = 12;
+            this.PnlMonedero.Controls.Add(this.PbIcono);
             this.PnlMonedero.Controls.Add(this.LblAbreviatura);
             this.PnlMonedero.Controls.Add(this.LblCantidadUsd);
             this.PnlMonedero.Controls.Add(this.LblNombre);
@@ -52,6 +55,7 @@
             this.PnlMonedero.Padding = new System.Windows.Forms.Padding(4);
             this.PnlMonedero.Size = new System.Drawing.Size(250, 150);
             this.PnlMonedero.TabIndex = 0;
+            this.PnlMonedero.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlMonedero_Paint);
             // 
             // LblAbreviatura
             // 
@@ -87,7 +91,7 @@
             this.LblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.Location = new System.Drawing.Point(4, 4);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.LblNombre.Padding = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.LblNombre.Size = new System.Drawing.Size(242, 33);
             this.LblNombre.TabIndex = 1;
             this.LblNombre.Text = "Nombre Cripto";
@@ -98,6 +102,19 @@
             // 
             this.guna2TaskBarProgress1.TargetForm = null;
             // 
+            // PbIcono
+            // 
+            this.PbIcono.BackColor = System.Drawing.Color.Transparent;
+            this.PbIcono.ImageRotate = 0F;
+            this.PbIcono.Location = new System.Drawing.Point(8, 4);
+            this.PbIcono.Name = "PbIcono";
+            this.PbIcono.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PbIcono.Size = new System.Drawing.Size(51, 51);
+            this.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbIcono.TabIndex = 5;
+            this.PbIcono.TabStop = false;
+            this.PbIcono.UseTransparentBackground = true;
+            // 
             // BtnMonedero
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -106,6 +123,7 @@
             this.Name = "BtnMonedero";
             this.Size = new System.Drawing.Size(250, 150);
             this.PnlMonedero.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PbIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -117,5 +135,6 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblCantidadUsd;
         private System.Windows.Forms.Label LblAbreviatura;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox PbIcono;
     }
 }

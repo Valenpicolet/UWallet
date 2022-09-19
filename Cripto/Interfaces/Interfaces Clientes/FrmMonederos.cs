@@ -21,5 +21,14 @@ namespace Cripto.Interfaces.Interfaces_Clientes
         {
             SdwFrmMonederos.SetShadowForm(this);
         }
+
+        #region Generar Botones Monederos Dinamicamente
+        private void GenerarBotonesDinamicos()
+        {
+            FlpanelMonederos.Controls.Clear();
+            var listaControles = new List<BtnMonedero>; 
+        }
+        #endregion
+
     }
 }
