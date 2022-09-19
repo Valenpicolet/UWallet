@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -43,6 +44,8 @@
             this.PnlPpal = new System.Windows.Forms.Panel();
             this.LblBienvenida = new System.Windows.Forms.Label();
             this.LblInfo = new System.Windows.Forms.Label();
+            this.SdwFrmPrincipal = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.DragFrmPrincipal = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.PnlMenu.SuspendLayout();
             this.PnlPpal.SuspendLayout();
@@ -100,7 +103,7 @@
             this.PnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlMenu.Location = new System.Drawing.Point(0, 0);
             this.PnlMenu.Name = "PnlMenu";
-            this.PnlMenu.Size = new System.Drawing.Size(200, 703);
+            this.PnlMenu.Size = new System.Drawing.Size(200, 742);
             this.PnlMenu.TabIndex = 2;
             // 
             // BtnCerrarSesion
@@ -259,7 +262,7 @@
             this.PnlPpal.Controls.Add(this.LblBienvenida);
             this.PnlPpal.Location = new System.Drawing.Point(196, 0);
             this.PnlPpal.Name = "PnlPpal";
-            this.PnlPpal.Size = new System.Drawing.Size(786, 703);
+            this.PnlPpal.Size = new System.Drawing.Size(803, 742);
             this.PnlPpal.TabIndex = 5;
             this.PnlPpal.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlPpal_Paint);
             // 
@@ -285,11 +288,21 @@
             this.LblInfo.TabIndex = 1;
             this.LblInfo.Text = "Comienza tu experiencia con U Wallet precionando alguna opción del menú!";
             // 
+            // SdwFrmPrincipal
+            // 
+            this.SdwFrmPrincipal.TargetForm = this;
+            // 
+            // DragFrmPrincipal
+            // 
+            this.DragFrmPrincipal.DockIndicatorTransparencyValue = 0.6D;
+            this.DragFrmPrincipal.TargetControl = this;
+            this.DragFrmPrincipal.UseTransparentDrag = true;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 703);
+            this.ClientSize = new System.Drawing.Size(1000, 742);
             this.Controls.Add(this.PnlMenu);
             this.Controls.Add(this.BtnMinimizar);
             this.Controls.Add(this.BtnCerrar);
@@ -322,5 +335,7 @@
         private System.Windows.Forms.Panel PnlPpal;
         private System.Windows.Forms.Label LblInfo;
         private System.Windows.Forms.Label LblBienvenida;
+        private Guna.UI2.WinForms.Guna2ShadowForm SdwFrmPrincipal;
+        private Guna.UI2.WinForms.Guna2DragControl DragFrmPrincipal;
     }
 }

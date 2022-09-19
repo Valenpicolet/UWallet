@@ -57,6 +57,10 @@
             this.DragControlFrmCotizacion.TargetControl = this;
             this.DragControlFrmCotizacion.UseTransparentDrag = true;
             // 
+            // SdwFrmCotizacion
+            // 
+            this.SdwFrmCotizacion.TargetForm = this;
+            // 
             // guna2DateTimePicker1
             // 
             this.guna2DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -83,7 +87,7 @@
             this.guna2Panel2.Controls.Add(this.chart1);
             this.guna2Panel2.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(217, 76);
+            this.guna2Panel2.Location = new System.Drawing.Point(197, 56);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(715, 299);
             this.guna2Panel2.TabIndex = 0;
@@ -180,7 +184,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvCotizaciones.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgvCotizaciones.GridColor = System.Drawing.Color.DarkGray;
-            this.DgvCotizaciones.Location = new System.Drawing.Point(217, 397);
+            this.DgvCotizaciones.Location = new System.Drawing.Point(197, 377);
             this.DgvCotizaciones.MultiSelect = false;
             this.DgvCotizaciones.Name = "DgvCotizaciones";
             this.DgvCotizaciones.ReadOnly = true;
