@@ -1,4 +1,4 @@
-﻿namespace PAV
+﻿namespace Cripto.Interfaces.Interfaces_Clientes
 {
     partial class FrmRecuperarContrasenia
     {
