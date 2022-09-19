@@ -44,6 +44,9 @@ namespace Cripto
 
         }
 
+        private void FrmCotizaciones_Load_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -77,10 +77,8 @@
     <Compile Include="Entidades\Ciudad.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Cotizacion.cs" />
-    <Compile Include="Entidades\Cotizaciones.cs" />
     <Compile Include="Entidades\Criptomoneda.cs" />
     <Compile Include="Entidades\Monedero.cs" />
-    <Compile Include="Entidades\Monederos.cs" />
     <Compile Include="Entidades\Pais.cs" />
     <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\TipoTransaccion.cs" />
@@ -115,9 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmCotizaciones.resx">
       <DependentUpon>FrmCotizaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmMonederos.resx">
-      <DependentUpon>FrmMonederos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

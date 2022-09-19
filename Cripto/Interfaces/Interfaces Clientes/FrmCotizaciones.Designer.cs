@@ -251,6 +251,7 @@
             this.Name = "FrmCotizaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ovreview";
+            this.Load += new System.EventHandler(this.FrmCotizaciones_Load_1);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCotizaciones)).EndInit();

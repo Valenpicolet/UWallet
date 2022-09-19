@@ -57,5 +57,10 @@ namespace Cripto.Interfaces.Interfaces_Clientes
         {
             Dispose();
         }
+
+        private void PnlPpal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

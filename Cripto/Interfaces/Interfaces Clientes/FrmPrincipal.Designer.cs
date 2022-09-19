@@ -41,8 +41,11 @@
             this.BtnMinimizar = new Guna.UI2.WinForms.Guna2Button();
             this.BtnCerrar = new Guna.UI2.WinForms.Guna2Button();
             this.PnlPpal = new System.Windows.Forms.Panel();
+            this.LblBienvenida = new System.Windows.Forms.Label();
+            this.LblInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.PnlMenu.SuspendLayout();
+            this.PnlPpal.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2TextBox2
@@ -252,10 +255,35 @@
             // 
             // PnlPpal
             // 
+            this.PnlPpal.Controls.Add(this.LblInfo);
+            this.PnlPpal.Controls.Add(this.LblBienvenida);
             this.PnlPpal.Location = new System.Drawing.Point(196, 0);
             this.PnlPpal.Name = "PnlPpal";
             this.PnlPpal.Size = new System.Drawing.Size(786, 703);
             this.PnlPpal.TabIndex = 5;
+            this.PnlPpal.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlPpal_Paint);
+            // 
+            // LblBienvenida
+            // 
+            this.LblBienvenida.AutoSize = true;
+            this.LblBienvenida.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBienvenida.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.LblBienvenida.Location = new System.Drawing.Point(148, 118);
+            this.LblBienvenida.Name = "LblBienvenida";
+            this.LblBienvenida.Size = new System.Drawing.Size(356, 45);
+            this.LblBienvenida.TabIndex = 0;
+            this.LblBienvenida.Text = "Bienvenido a U Wallet";
+            // 
+            // LblInfo
+            // 
+            this.LblInfo.AutoSize = true;
+            this.LblInfo.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LblInfo.Location = new System.Drawing.Point(105, 182);
+            this.LblInfo.Name = "LblInfo";
+            this.LblInfo.Size = new System.Drawing.Size(574, 21);
+            this.LblInfo.TabIndex = 1;
+            this.LblInfo.Text = "Comienza tu experiencia con U Wallet precionando alguna opción del menú!";
             // 
             // FrmPrincipal
             // 
@@ -272,6 +300,8 @@
             this.Text = "FrmPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.PnlMenu.ResumeLayout(false);
+            this.PnlPpal.ResumeLayout(false);
+            this.PnlPpal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +320,7 @@
         private Guna.UI2.WinForms.Guna2Button BtnMinimizar;
         private Guna.UI2.WinForms.Guna2Button BtnCerrar;
         private System.Windows.Forms.Panel PnlPpal;
+        private System.Windows.Forms.Label LblInfo;
+        private System.Windows.Forms.Label LblBienvenida;
     }
 }
