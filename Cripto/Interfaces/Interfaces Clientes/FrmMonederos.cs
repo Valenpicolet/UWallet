@@ -37,7 +37,7 @@ namespace Cripto.Interfaces.Interfaces_Clientes
             {
                 foreach (var celda in monederos)
                 {
-
+                    listaMonederos[i] = new BtnMonedero();
                     listaMonederos[i].ItemCantidad = celda.getSaldo().ToString();
                     listaMonederos[i].ItemNombre = celda.getIdCripto().getNombre();
                     listaMonederos[i].ItemAbreviatura = celda.getIdCripto().getAbreviacion();

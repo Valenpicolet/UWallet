@@ -21,7 +21,7 @@
         {
             this.usuario = usuario;
             this.cripto = cripto;
-            this.saldo = 0;
+            this.saldo = saldo;
         }
     }
 }
