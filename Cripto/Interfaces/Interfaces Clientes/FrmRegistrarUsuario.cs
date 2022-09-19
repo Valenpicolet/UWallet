@@ -34,7 +34,7 @@ namespace PAV
 
             bool existeEnLaBD = ExisteEnLaBD();
 
-            if (tienenombreDeUsuario && tieneEmail && tieneContrasenia && contraseniasCoinciden && existeEnLaBD == false)
+            if (tienenombreDeUsuario && tieneEmail && tieneContrasenia && contraseniasCoinciden)
             {
                 lblErrorRegistrarUsuario.Visible = false;
 
