@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Cripto.Interfaces.Interfaces_Clientes
+namespace PAV
 {
     public partial class FrmRecuperarContrasenia : Form
     {

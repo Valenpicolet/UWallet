@@ -1,4 +1,4 @@
-﻿namespace Cripto
+﻿namespace PAV
 {
     partial class FrmIniciarSesion
     {

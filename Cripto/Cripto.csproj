@@ -91,6 +91,12 @@
     <Compile Include="Interfaces\Interfaces Clientes\FrmCotizaciones.Designer.cs">
       <DependentUpon>FrmCotizaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmIniciarSesion.Designer.cs">
+      <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\Interfaces Clientes\FrmMonederos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,24 @@
     <Compile Include="Interfaces\Interfaces Clientes\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmRecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmRecuperarContrasenia.Designer.cs">
+      <DependentUpon>FrmRecuperarContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmRegistrarCliente.Designer.cs">
+      <DependentUpon>FrmRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces Clientes\FrmRegistrarUsuario.Designer.cs">
+      <DependentUpon>FrmRegistrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\CotizacionesRepositorio.cs" />
@@ -114,11 +138,23 @@
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmCotizaciones.resx">
       <DependentUpon>FrmCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmIniciarSesion.resx">
+      <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmMonederos.resx">
       <DependentUpon>FrmMonederos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmRecuperarContrasenia.resx">
+      <DependentUpon>FrmRecuperarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmRegistrarCliente.resx">
+      <DependentUpon>FrmRegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Interfaces Clientes\FrmRegistrarUsuario.resx">
+      <DependentUpon>FrmRegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

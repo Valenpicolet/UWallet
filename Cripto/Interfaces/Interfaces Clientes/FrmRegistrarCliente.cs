@@ -32,7 +32,7 @@ namespace PAV
             string nombre = txtNombre.Text.Trim();
             string apellido = txtApellido.Text.Trim();
             string telefono = txtTelefono.Text.Trim();
-            string ciudad = txtCiudad.Text.Trim();
+            string ciudad = cmbCiudad.GetItemText(cmbCiudad.SelectedItem);
             string pais = cmbPais.GetItemText(cmbPais.SelectedItem);
 
             bool tieneNombre = esDatoValido(nombre);

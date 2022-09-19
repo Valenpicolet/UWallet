@@ -34,11 +34,11 @@
             this.txtMail = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbPais = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCiudad = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblRegistrarCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRegistrarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.lblErrorRegistrarCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cmbCiudad = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // guna2ControlBox1
@@ -173,31 +173,6 @@
             this.txtTelefono.Size = new System.Drawing.Size(257, 36);
             this.txtTelefono.TabIndex = 5;
             // 
-            // txtCiudad
-            // 
-            this.txtCiudad.Animated = true;
-            this.txtCiudad.AutoRoundedCorners = true;
-            this.txtCiudad.BorderColor = System.Drawing.Color.Silver;
-            this.txtCiudad.BorderRadius = 17;
-            this.txtCiudad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCiudad.DefaultText = "";
-            this.txtCiudad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCiudad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCiudad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCiudad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCiudad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCiudad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCiudad.Location = new System.Drawing.Point(50, 360);
-            this.txtCiudad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.PasswordChar = '\0';
-            this.txtCiudad.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtCiudad.PlaceholderText = "Ciudad";
-            this.txtCiudad.SelectedText = "";
-            this.txtCiudad.Size = new System.Drawing.Size(257, 36);
-            this.txtCiudad.TabIndex = 6;
-            // 
             // lblRegistrarCliente
             // 
             this.lblRegistrarCliente.BackColor = System.Drawing.Color.Transparent;
@@ -249,17 +224,35 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(227, 19);
             this.maskedTextBox1.TabIndex = 10;
             // 
+            // cmbCiudad
+            // 
+            this.cmbCiudad.AutoRoundedCorners = true;
+            this.cmbCiudad.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCiudad.BorderColor = System.Drawing.Color.Silver;
+            this.cmbCiudad.BorderRadius = 17;
+            this.cmbCiudad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCiudad.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbCiudad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbCiudad.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbCiudad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbCiudad.ItemHeight = 30;
+            this.cmbCiudad.Location = new System.Drawing.Point(50, 360);
+            this.cmbCiudad.Name = "cmbCiudad";
+            this.cmbCiudad.Size = new System.Drawing.Size(257, 36);
+            this.cmbCiudad.TabIndex = 11;
+            // 
             // FrmRegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(354, 589);
+            this.Controls.Add(this.cmbCiudad);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.lblErrorRegistrarCliente);
             this.Controls.Add(this.btnRegistrarCliente);
             this.Controls.Add(this.lblRegistrarCliente);
-            this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.cmbPais);
             this.Controls.Add(this.txtMail);
@@ -285,10 +278,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMail;
         private Guna.UI2.WinForms.Guna2ComboBox cmbPais;
         private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
-        private Guna.UI2.WinForms.Guna2TextBox txtCiudad;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRegistrarCliente;
         private Guna.UI2.WinForms.Guna2Button btnRegistrarCliente;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblErrorRegistrarCliente;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbCiudad;
     }
 }
