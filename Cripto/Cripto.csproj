@@ -127,6 +127,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -172,6 +173,7 @@
     <Content Include="Recursos\exit.png" />
     <Content Include="Recursos\minimize.png" />
     <Content Include="Recursos\Uwallet.png" />
+    <None Include="Resources\ethereum_icono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

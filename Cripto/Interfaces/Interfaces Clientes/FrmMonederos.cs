@@ -23,7 +23,6 @@ namespace Cripto.Interfaces.Interfaces_Clientes
 
         private void FrmMonederos_Load(object sender, EventArgs e)
         {
-            SdwFrmMonederos.SetShadowForm(this);
             GenerarBotonesDinamicos();
         }
 
@@ -35,22 +34,20 @@ namespace Cripto.Interfaces.Interfaces_Clientes
             BtnMonedero[] listaMonederos = new BtnMonedero[monederos.Count];
             for ( int i = 0; i < listaMonederos.Length; i ++  )
             {
-                foreach (var celda in monederos)
-                {
-                    listaMonederos[i] = new BtnMonedero();
-                    listaMonederos[i].ItemCantidad = celda.getSaldo().ToString();
-                    listaMonederos[i].ItemNombre = celda.getIdCripto().getNombre();
-                    listaMonederos[i].ItemAbreviatura = celda.getIdCripto().getAbreviacion();
+                listaMonederos[i] = new BtnMonedero();
+                listaMonederos[i].ItemCantidad = monederos[i].getSaldo().ToString();
+                listaMonederos[i].ItemNombre = monederos[i].getIdCripto().getNombre();
+                listaMonederos[i].ItemAbreviatura = monederos[i].getIdCripto().getAbreviacion();
                     
-                    if (listaMonederos[i].ItemAbreviatura == "BTN")
-                    {
-                        listaMonederos[i].Icono = Image.FromFile(@"C:\Users\Usuario\Documents\Mis Documentos Viejo\Valentina\facu\PAV1\Cripto\Cripto\Recursos\ethereum_icon.png");
-                        listaMonederos[i].Color1 = Color.FromArgb(125, 255, 255);
-                        listaMonederos[i].Color2 = Color.FromArgb(99, 114, 114);
-                    }
-                    FlpanelMonederos.Controls.Add(listaMonederos[i]);
+                if (listaMonederos[i].ItemAbreviatura == "BTN")
+                {
+                    listaMonederos[i].Icono = Image.FromFile(@"C:\Users\Usuario\Documents\Mis Documentos Viejo\Valentina\facu\PAV1\Cripto\Cripto\Recursos\ethereum_icon.png");
+                    listaMonederos[i].Color1 = Color.FromArgb(125, 255, 255);
+                    listaMonederos[i].Color2 = Color.FromArgb(99, 114, 114);
+                }
+                FlpanelMonederos.Controls.Add(listaMonederos[i]);
                 }      
-            }
+            
         }
         #endregion
 
