@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PAV
+namespace Cripto
 {
     public partial class FrmIniciarSesion : Form
     {
