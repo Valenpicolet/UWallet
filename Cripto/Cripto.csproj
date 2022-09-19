@@ -74,6 +74,7 @@
     <Compile Include="Controles\BtnMonedero.Designer.cs">
       <DependentUpon>BtnMonedero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\GuardarImagen.cs" />
     <Compile Include="Entidades\Ciudad.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Cotizacion.cs" />
@@ -156,11 +157,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Recursos\2845693_bitcoin_cryptocurrency_line_template_icon.png" />
+    <Content Include="Recursos\BTN_icono.png" />
     <Content Include="Recursos\back_grey.png" />
     <Content Include="Recursos\back_white.png" />
-    <Content Include="Recursos\ethereum_icon.png" />
-    <Content Include="Recursos\2845703_bitcoin_cryptocurrency_line_litecoin_template_icon.png" />
+    <Content Include="Recursos\ETH_icono.png" />
+    <Content Include="Recursos\LTN_icono.png" />
     <Content Include="Recursos\4634974_wallet_coin_financial_money_icon %281%29.png" />
     <Content Include="Recursos\4634974_wallet_coin_financial_money_icon %283%29.png" />
     <Content Include="Recursos\4634993_coins_arrows_coin_financial_money_icon %282%29.png" />
@@ -168,7 +169,7 @@
     <Content Include="Recursos\4634998_chart_analytics_dashboard_graphic_icon %281%29.png" />
     <Content Include="Recursos\4634998_chart_analytics_dashboard_graphic_icon %283%29.png" />
     <Content Include="Recursos\9356043_dashboard_icon.png" />
-    <Content Include="Recursos\binance.png" />
+    <Content Include="Recursos\BNB_icono.png" />
     <Content Include="Recursos\dashboard.png" />
     <Content Include="Recursos\exit.png" />
     <Content Include="Recursos\minimize.png" />
