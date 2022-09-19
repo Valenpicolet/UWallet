@@ -13,8 +13,8 @@
         public Usuario getIdUsuario() { return this.usuario; }   
         public void setIdCripto(Criptomoneda cripto) { this.cripto = cripto; }
         public Criptomoneda getIdCripto() { return this.cripto; }
-        public void setMonto(int monto) { this.monto = monto; }
-        public int getMonto() { return this.monto; }
+        public void setSaldo(int monto) { this.saldo = saldo; }
+        public int getSaldo() { return this.saldo; }
         #endregion
 
         public Monedero(Usuario usuario, Criptomoneda cripto, int saldo)

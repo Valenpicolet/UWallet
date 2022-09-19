@@ -13,6 +13,8 @@ namespace Cripto.Repositorio
 {
     public class MonederoRepositorio
     {
+        
+
         #region Guardar Monederos
         //public bool GuardarMonederos(Image img, string nombre, string abreviatura, string cantidadUSD, Color color1, Color color2)
         //{
