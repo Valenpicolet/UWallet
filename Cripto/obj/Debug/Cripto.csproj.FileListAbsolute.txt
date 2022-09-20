@@ -28,3 +28,7 @@ C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\Cripto.csp
 C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\Cripto.csproj.CoreCompileInputs.cache
 C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\Cripto.csproj.CopyComplete
 C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\Cripto.pdb
+C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\PAV.FrmIniciarSesion.resources
+C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\PAV.FrmRecuperarContrasenia.resources
+C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\PAV.FrmRegistrarCliente.resources
+C:\Users\marti\OneDrive\Developer\C#\UWallet\UWallet\Cripto\obj\Debug\PAV.FrmRegistrarUsuario.resources

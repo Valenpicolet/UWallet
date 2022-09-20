@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cripto.Interfaces.Interfaces_Clientes;
+using Pav.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +43,7 @@ namespace PAV
             bool tieneCiudad = esDatoValido(ciudad);
             bool tienePais = esDatoValido(pais);
 
-            bool existeEnLaBD = ExisteEnLaBD();
+            bool existeEnLaBD = ExisteEnLaBD(nombre, apellido, telefono, ciudad, pais);
 
             if (tieneNombre && tieneApellido && tieneTelefono && tieneCiudad && tienePais)
             {
@@ -56,8 +58,9 @@ namespace PAV
                 {
                     // crear cliente
                     // registrar cliente en al BD
-
+                    
                     var principalCliente = new FrmPrincipal();
+                    principalCliente.Show();
                     this.Close();
                 }
             }
@@ -67,10 +70,9 @@ namespace PAV
                 lblErrorRegistrarCliente.Text = "Completa todos los datos para registrarte.";
                 lblErrorRegistrarCliente.Visible = true;
             }
-
         }
 
-        private bool ExisteEnLaBD()
+        private bool ExisteEnLaBD(string nombre, string apellido, string telefono, string ciudad, string pais)
         {
             // consultar si el cliente ya existe en la bd
             // si ya existe, deberia sugerir recuperar contraseño (si me acuerdo mañana lo hago)

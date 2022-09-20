@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cripto.Servicios;
+using System;
 
 namespace Pav.Entidades
 {
@@ -34,5 +35,6 @@ namespace Pav.Entidades
         {
             this.nombre = nombre;
         }
+
     }
 }

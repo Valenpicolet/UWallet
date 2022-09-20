@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cb1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.cbClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtContrasenia = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnIniciarSesion = new Guna.UI2.WinForms.Guna2Button();
@@ -41,16 +41,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // cb1
+            // cbClose
             // 
-            this.cb1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.cb1.IconColor = System.Drawing.Color.White;
-            this.cb1.Location = new System.Drawing.Point(309, 0);
-            this.cb1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(45, 29);
-            this.cb1.TabIndex = 0;
+            this.cbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.cbClose.IconColor = System.Drawing.Color.White;
+            this.cbClose.Location = new System.Drawing.Point(309, 0);
+            this.cbClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbClose.Name = "cbClose";
+            this.cbClose.Size = new System.Drawing.Size(45, 29);
+            this.cbClose.TabIndex = 6;
             // 
             // txtUsuario
             // 
@@ -114,8 +114,12 @@
             this.btnIniciarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnIniciarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnIniciarSesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(255)))));
+            this.btnIniciarSesion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(178)))));
             this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(178)))));
+            this.btnIniciarSesion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(178)))));
+            this.btnIniciarSesion.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.IndicateFocus = true;
             this.btnIniciarSesion.Location = new System.Drawing.Point(82, 375);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
@@ -131,7 +135,7 @@
             this.lblIniciarSesion.Location = new System.Drawing.Point(105, 158);
             this.lblIniciarSesion.Name = "lblIniciarSesion";
             this.lblIniciarSesion.Size = new System.Drawing.Size(132, 27);
-            this.lblIniciarSesion.TabIndex = 4;
+            this.lblIniciarSesion.TabIndex = 80;
             this.lblIniciarSesion.Text = "Iniciar Sesión";
             // 
             // lblNoCuenta
@@ -141,7 +145,7 @@
             this.lblNoCuenta.Location = new System.Drawing.Point(82, 453);
             this.lblNoCuenta.Name = "lblNoCuenta";
             this.lblNoCuenta.Size = new System.Drawing.Size(133, 17);
-            this.lblNoCuenta.TabIndex = 5;
+            this.lblNoCuenta.TabIndex = 82;
             this.lblNoCuenta.Text = "¿No tienes una cuenta?";
             // 
             // btnRegistrar
@@ -152,13 +156,18 @@
             this.btnRegistrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRegistrar.FillColor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(178)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(178)))));
             this.btnRegistrar.IndicateFocus = true;
             this.btnRegistrar.Location = new System.Drawing.Point(204, 452);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(80, 20);
-            this.btnRegistrar.TabIndex = 6;
+            this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrate";
             this.btnRegistrar.UseTransparentBackground = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -171,13 +180,18 @@
             this.btnRecuperarContrasenia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRecuperarContrasenia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRecuperarContrasenia.FillColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarContrasenia.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(178)))));
             this.btnRecuperarContrasenia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRecuperarContrasenia.ForeColor = System.Drawing.Color.Gray;
+            this.btnRecuperarContrasenia.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarContrasenia.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarContrasenia.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarContrasenia.HoverState.ForeColor = System.Drawing.Color.DimGray;
             this.btnRecuperarContrasenia.IndicateFocus = true;
             this.btnRecuperarContrasenia.Location = new System.Drawing.Point(82, 310);
             this.btnRecuperarContrasenia.Name = "btnRecuperarContrasenia";
             this.btnRecuperarContrasenia.Size = new System.Drawing.Size(190, 20);
-            this.btnRecuperarContrasenia.TabIndex = 7;
+            this.btnRecuperarContrasenia.TabIndex = 4;
             this.btnRecuperarContrasenia.Text = "¿Has olvidado tu contraseña?";
             this.btnRecuperarContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRecuperarContrasenia.UseTransparentBackground = true;
@@ -194,15 +208,14 @@
             // 
             // lblErrorInicioSesion
             // 
+            this.lblErrorInicioSesion.AutoSize = false;
             this.lblErrorInicioSesion.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorInicioSesion.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorInicioSesion.Location = new System.Drawing.Point(82, 336);
+            this.lblErrorInicioSesion.Location = new System.Drawing.Point(48, 336);
             this.lblErrorInicioSesion.Name = "lblErrorInicioSesion";
-            this.lblErrorInicioSesion.Size = new System.Drawing.Size(190, 17);
-            this.lblErrorInicioSesion.TabIndex = 9;
-            this.lblErrorInicioSesion.Text = "INGRESAR ERROR Y VISIBILIZAR";
-            this.lblErrorInicioSesion.Visible = false;
+            this.lblErrorInicioSesion.Size = new System.Drawing.Size(257, 33);
+            this.lblErrorInicioSesion.TabIndex = 81;
             // 
             // FrmIniciarSesion
             // 
@@ -220,7 +233,7 @@
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContrasenia);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.cb1);
+            this.Controls.Add(this.cbClose);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -235,7 +248,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2ControlBox cb1;
+        private Guna.UI2.WinForms.Guna2ControlBox cbClose;
         private Guna.UI2.WinForms.Guna2TextBox txtUsuario;
         private Guna.UI2.WinForms.Guna2TextBox txtContrasenia;
         private Guna.UI2.WinForms.Guna2Button btnIniciarSesion;

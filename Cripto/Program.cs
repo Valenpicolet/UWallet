@@ -1,4 +1,5 @@
 ﻿using Cripto.Interfaces.Interfaces_Clientes;
+using PAV;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Cripto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new FrmIniciarSesion());
         }
     }
 }
