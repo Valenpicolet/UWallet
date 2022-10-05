@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cripto.Servicios;
+using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,52 +22,64 @@ namespace PAV
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
-            string contrasenia1 = txtContrasenia.Text;
-            string contrasenia2 = txtRepetirContrasenia.Text;
-
             string nombreDeUsuario = txtNombreUsuario.Text.Trim();
-            string email = txtContrasenia.Text.Trim();
+            string email = txtMail.Text.Trim();
             string contrasenia = txtContrasenia.Text.Trim();
+            string contrasenia2 = txtRepetirContrasenia.Text.Trim();
 
-            bool tienenombreDeUsuario = esDatoValido(nombreDeUsuario);
-            bool tieneEmail = validarEmaill(email);
+            bool tieneNombreDeUsuario = esDatoValido(nombreDeUsuario);
+            bool tieneEmail = esDatoValido(email);
             bool tieneContrasenia = esDatoValido(contrasenia);
-            bool contraseniasCoinciden = String.Equals(contrasenia1, contrasenia2);
+            bool mailValido = validarEmaillPosta(email);
+            bool contraseniasCoinciden = String.Equals(contrasenia, contrasenia2);
 
-            bool existeEnLaBD = ExisteEnLaBD();
+            bool existeEnLaBD = ExisteEnLaBD(nombreDeUsuario, email);
 
-            if (tienenombreDeUsuario && tieneEmail && tieneContrasenia && contraseniasCoinciden)
+            if (tieneNombreDeUsuario && tieneEmail && tieneContrasenia && contraseniasCoinciden && mailValido)
             {
                 lblErrorRegistrarUsuario.Visible = false;
 
-
                 if (existeEnLaBD)
                 {
-                    lblErrorRegistrarUsuario.Text = "El usuario ya esta registrado.";
-                    lblErrorRegistrarUsuario.Visible = true;
+                    MostrarError(lblErrorRegistrarUsuario, "El usuario ya esta registrado.", true);
                 }
                 else
                 {
-                    // crear usuario
-                    // registrar usuario en al BD
-
+                    AltaUsuario(nombreDeUsuario, email, contrasenia);
+                    MessageBox.Show("Usuario creado");
+                    this.Hide();
                     var registrarCliente = new FrmRegistrarCliente();
                     this.Close();
                 }
             }
             else
             {
-                lblErrorRegistrarUsuario.Text = "El usuario no se ha podido crear.";
-                lblErrorRegistrarUsuario.Visible = true;
+                MostrarError(lblErrorRegistrarUsuario, "El usuario no se ha podido crear.", true);
             }
-
-            // enviar info a al BD
-
         }
 
-        private bool ExisteEnLaBD()
+        private void MostrarError(Guna2HtmlLabel lbl, string mensaje, bool mostrar)
         {
-            throw new NotImplementedException();
+            lbl.Visible = mostrar;
+            lbl.Text = mensaje;
+        }
+
+        private void AltaUsuario(string nombreDeUsuario, string email, string contrasenia)
+        {
+            var sql = $"INSERT INTO Usuarios (nombre, email, contrasenia, id_perfil, fecha_alta)" +
+                $"VALUES ('{nombreDeUsuario}', '{email}', '{contrasenia}', 2, GETDATE())";
+            var res = DBHelper.GetDBHelper().EjecutarSQL(sql);
+        }
+
+        private bool ExisteEnLaBD(string nombre, string email)
+        {
+            var sql = $"SELECT * FROM Usuarios WHERE nombre='{nombre}' AND email='{email}'";
+            var res = DBHelper.GetDBHelper().ConsultaSQL(sql);
+
+            if (res.Rows.Count == 0)
+                return false;
+
+            return true;
         }
 
         public bool esDatoValido(string dato)
@@ -74,7 +88,6 @@ namespace PAV
                 return false;
             else
                 return true;
-
         }
 
         private void txtRepetirContrasenia_TextChanged(object sender, EventArgs e)
@@ -88,12 +101,11 @@ namespace PAV
             }
             else
             {
-                lblContraseniasNoCoinciden.Text = "Las contraseñas no coinciden";
-                lblContraseniasNoCoinciden.Visible = true;
+                MostrarError(lblContraseniasNoCoinciden, "Las contraseñas no coinciden", true);
             }
         }
 
-        public static bool validarEmaill(string email)
+        public static bool validarEmaillPosta(string email)
         {
             try
             {
@@ -106,45 +118,55 @@ namespace PAV
             }
         }
 
+        public static bool ValidarEmaill(string email)
+        {
+            var sql = $"SELECT * FROM Usuarios WHERE email='{email}'";
+            var res = DBHelper.GetDBHelper().ConsultaSQL(sql);
+
+            if (res.Rows.Count == 0)
+                return true;
+
+            return false;
+        }
+
         private void txtMail_Leave(object sender, EventArgs e)
         {
             string input = txtMail.Text.Trim();
-            bool emailEsValido = validarEmaill(input);
+            bool emailEsValido = ValidarEmaill(input);
             if (emailEsValido)
             {
-                lblErrorMail.Visible = false;
+                MostrarError(lblErrorMail, "", false);
             }
             else
             {
-                lblErrorMail.Text = "E-mail no válido.";
-                lblErrorMail.Visible = true;
+                MostrarError(lblErrorMail, "E-mail no válido.", true);
             }
         }
 
         private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
         {
             string input = txtNombreUsuario.Text.Trim();
-            bool nombreUsuarioEsValido = EstaNombreDeUsuarioDisponible(input);
+            bool nombreUsuarioEsValido = ValidarNombreUsuario(input);
 
             if (nombreUsuarioEsValido)
             {
-                lblErrorNombreUsuario.Visible = false;
+                MostrarError(lblErrorNombreUsuario, "", false);
             }
             else
             {
-                lblErrorNombreUsuario.Text = "Nombre de usuario no disponible.";
-                lblErrorNombreUsuario.Visible = true;
+                MostrarError(lblErrorNombreUsuario, "Nombre de usuario no disponible.", true);
             }
-
         }
 
-        private bool EstaNombreDeUsuarioDisponible(string input)
+        private bool ValidarNombreUsuario(string nombre)
         {
-            // consultar si existe en bd
-            // si el usuario ya existe, devolver false
-            // si el usuario no existe, devolver true
+            var sql = $"SELECT * FROM Usuarios WHERE nombre='{nombre}'";
+            var res = DBHelper.GetDBHelper().ConsultaSQL(sql);
 
-            throw new NotImplementedException();
+            if (res.Rows.Count == 0)
+                return true;
+
+            return false;
         }
     }
 }

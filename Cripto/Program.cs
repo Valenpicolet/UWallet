@@ -18,7 +18,7 @@ namespace Cripto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmIniciarSesion());
+            Application.Run(new FrmRegistrarUsuario());
         }
     }
 }

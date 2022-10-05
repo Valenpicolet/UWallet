@@ -216,6 +216,7 @@
             this.lblErrorInicioSesion.Name = "lblErrorInicioSesion";
             this.lblErrorInicioSesion.Size = new System.Drawing.Size(257, 33);
             this.lblErrorInicioSesion.TabIndex = 81;
+            this.lblErrorInicioSesion.Text = null;
             // 
             // FrmIniciarSesion
             // 

@@ -169,7 +169,7 @@
             this.btnRegistrarUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarUsuario.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarUsuario.IndicateFocus = true;
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(82, 462);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(82, 436);
             this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
             this.btnRegistrarUsuario.Size = new System.Drawing.Size(180, 45);
             this.btnRegistrarUsuario.TabIndex = 6;
@@ -188,57 +188,57 @@
             // 
             // lblContraseniasNoCoinciden
             // 
+            this.lblContraseniasNoCoinciden.AutoSize = false;
             this.lblContraseniasNoCoinciden.BackColor = System.Drawing.Color.Transparent;
             this.lblContraseniasNoCoinciden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseniasNoCoinciden.ForeColor = System.Drawing.Color.Red;
             this.lblContraseniasNoCoinciden.Location = new System.Drawing.Point(49, 381);
             this.lblContraseniasNoCoinciden.Name = "lblContraseniasNoCoinciden";
-            this.lblContraseniasNoCoinciden.Size = new System.Drawing.Size(190, 17);
+            this.lblContraseniasNoCoinciden.Size = new System.Drawing.Size(257, 17);
             this.lblContraseniasNoCoinciden.TabIndex = 8;
-            this.lblContraseniasNoCoinciden.Text = "INGRESAR ERROR Y VISIBILIZAR";
             this.lblContraseniasNoCoinciden.Visible = false;
             // 
             // lblErrorNombreUsuario
             // 
+            this.lblErrorNombreUsuario.AutoSize = false;
             this.lblErrorNombreUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorNombreUsuario.ForeColor = System.Drawing.Color.Red;
             this.lblErrorNombreUsuario.Location = new System.Drawing.Point(49, 184);
             this.lblErrorNombreUsuario.Name = "lblErrorNombreUsuario";
-            this.lblErrorNombreUsuario.Size = new System.Drawing.Size(190, 17);
+            this.lblErrorNombreUsuario.Size = new System.Drawing.Size(257, 17);
             this.lblErrorNombreUsuario.TabIndex = 9;
-            this.lblErrorNombreUsuario.Text = "INGRESAR ERROR Y VISIBILIZAR";
             this.lblErrorNombreUsuario.Visible = false;
             // 
             // lblErrorMail
             // 
+            this.lblErrorMail.AutoSize = false;
             this.lblErrorMail.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMail.ForeColor = System.Drawing.Color.Red;
             this.lblErrorMail.Location = new System.Drawing.Point(49, 257);
             this.lblErrorMail.Name = "lblErrorMail";
-            this.lblErrorMail.Size = new System.Drawing.Size(190, 17);
+            this.lblErrorMail.Size = new System.Drawing.Size(257, 17);
             this.lblErrorMail.TabIndex = 10;
-            this.lblErrorMail.Text = "INGRESAR ERROR Y VISIBILIZAR";
             this.lblErrorMail.Visible = false;
             // 
             // lblErrorRegistrarUsuario
             // 
+            this.lblErrorRegistrarUsuario.AutoSize = false;
             this.lblErrorRegistrarUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorRegistrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorRegistrarUsuario.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorRegistrarUsuario.Location = new System.Drawing.Point(49, 418);
+            this.lblErrorRegistrarUsuario.Location = new System.Drawing.Point(49, 404);
             this.lblErrorRegistrarUsuario.Name = "lblErrorRegistrarUsuario";
-            this.lblErrorRegistrarUsuario.Size = new System.Drawing.Size(190, 17);
+            this.lblErrorRegistrarUsuario.Size = new System.Drawing.Size(257, 17);
             this.lblErrorRegistrarUsuario.TabIndex = 11;
-            this.lblErrorRegistrarUsuario.Text = "INGRESAR ERROR Y VISIBILIZAR";
             // 
-            // RegistrarUsuario
+            // FrmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 543);
+            this.ClientSize = new System.Drawing.Size(354, 522);
             this.Controls.Add(this.lblErrorRegistrarUsuario);
             this.Controls.Add(this.lblErrorMail);
             this.Controls.Add(this.lblErrorNombreUsuario);
@@ -253,7 +253,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "RegistrarUsuario";
+            this.Name = "FrmRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar nuevo usuario";
             this.ResumeLayout(false);

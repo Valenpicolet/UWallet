@@ -31,7 +31,6 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtApellido = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMail = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbPais = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblRegistrarCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -101,32 +100,6 @@
             this.txtApellido.Size = new System.Drawing.Size(257, 36);
             this.txtApellido.TabIndex = 2;
             // 
-            // txtMail
-            // 
-            this.txtMail.Animated = true;
-            this.txtMail.AutoRoundedCorners = true;
-            this.txtMail.BorderColor = System.Drawing.Color.Silver;
-            this.txtMail.BorderRadius = 17;
-            this.txtMail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMail.DefaultText = "";
-            this.txtMail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMail.Location = new System.Drawing.Point(50, 249);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.PasswordChar = '\0';
-            this.txtMail.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtMail.PlaceholderText = "";
-            this.txtMail.ReadOnly = true;
-            this.txtMail.SelectedText = "";
-            this.txtMail.Size = new System.Drawing.Size(257, 36);
-            this.txtMail.TabIndex = 3;
-            // 
             // cmbPais
             // 
             this.cmbPais.AutoRoundedCorners = true;
@@ -142,10 +115,11 @@
             this.cmbPais.ItemHeight = 30;
             this.cmbPais.Items.AddRange(new object[] {
             "País"});
-            this.cmbPais.Location = new System.Drawing.Point(50, 415);
+            this.cmbPais.Location = new System.Drawing.Point(50, 304);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(257, 36);
             this.cmbPais.TabIndex = 4;
+            this.cmbPais.SelectedValueChanged += new System.EventHandler(this.cmbPais_SelectedValueChanged);
             // 
             // txtTelefono
             // 
@@ -163,7 +137,7 @@
             this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefono.Location = new System.Drawing.Point(50, 305);
+            this.txtTelefono.Location = new System.Drawing.Point(50, 247);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
@@ -196,7 +170,7 @@
             this.btnRegistrarCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarCliente.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarCliente.IndicateFocus = true;
-            this.btnRegistrarCliente.Location = new System.Drawing.Point(90, 512);
+            this.btnRegistrarCliente.Location = new System.Drawing.Point(90, 454);
             this.btnRegistrarCliente.Name = "btnRegistrarCliente";
             this.btnRegistrarCliente.Size = new System.Drawing.Size(180, 45);
             this.btnRegistrarCliente.TabIndex = 8;
@@ -205,20 +179,20 @@
             // 
             // lblErrorRegistrarCliente
             // 
+            this.lblErrorRegistrarCliente.AutoSize = false;
             this.lblErrorRegistrarCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorRegistrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorRegistrarCliente.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorRegistrarCliente.Location = new System.Drawing.Point(50, 467);
+            this.lblErrorRegistrarCliente.Location = new System.Drawing.Point(50, 409);
             this.lblErrorRegistrarCliente.Name = "lblErrorRegistrarCliente";
-            this.lblErrorRegistrarCliente.Size = new System.Drawing.Size(192, 17);
+            this.lblErrorRegistrarCliente.Size = new System.Drawing.Size(257, 17);
             this.lblErrorRegistrarCliente.TabIndex = 9;
-            this.lblErrorRegistrarCliente.Text = "INGRESAR ERROR Y VISUALIZAR";
             // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.maskedTextBox1.Location = new System.Drawing.Point(62, 313);
+            this.maskedTextBox1.Location = new System.Drawing.Point(62, 255);
             this.maskedTextBox1.Mask = "+99 9 0000 00-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(227, 19);
@@ -237,7 +211,7 @@
             this.cmbCiudad.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbCiudad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbCiudad.ItemHeight = 30;
-            this.cmbCiudad.Location = new System.Drawing.Point(50, 360);
+            this.cmbCiudad.Location = new System.Drawing.Point(50, 357);
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(257, 36);
             this.cmbCiudad.TabIndex = 11;
@@ -247,7 +221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 589);
+            this.ClientSize = new System.Drawing.Size(354, 537);
             this.Controls.Add(this.cmbCiudad);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.lblErrorRegistrarCliente);
@@ -255,7 +229,6 @@
             this.Controls.Add(this.lblRegistrarCliente);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.cmbPais);
-            this.Controls.Add(this.txtMail);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.guna2ControlBox1);
@@ -275,7 +248,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtNombre;
         private Guna.UI2.WinForms.Guna2TextBox txtApellido;
-        private Guna.UI2.WinForms.Guna2TextBox txtMail;
         private Guna.UI2.WinForms.Guna2ComboBox cmbPais;
         private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRegistrarCliente;

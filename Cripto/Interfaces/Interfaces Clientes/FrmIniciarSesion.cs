@@ -24,12 +24,14 @@ namespace PAV
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             var registraruUsuario = new FrmRegistrarUsuario();
+            registraruUsuario.Show();
             this.Close();
         }
 
         private void btnRecuperarContrasenia_Click(object sender, EventArgs e)
         {
             var RecuperarContrasenia = new FrmRecuperarContrasenia();
+            RecuperarContrasenia.Show();
             this.Close();
         }
 
@@ -87,7 +89,7 @@ namespace PAV
                     }
                     else
                     {
-            //            var registrarCliente = new FrmRegistrarCliente();
+                        var registrarCliente = new FrmRegistrarCliente();
                     }
                     this.Close();
                 }

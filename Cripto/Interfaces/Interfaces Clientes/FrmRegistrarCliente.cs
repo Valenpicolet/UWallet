@@ -1,4 +1,6 @@
 ﻿using Cripto.Interfaces.Interfaces_Clientes;
+using Cripto.Servicios;
+using Guna.UI2.WinForms;
 using Pav.Entidades;
 using System;
 using System.Collections.Generic;
@@ -30,7 +32,6 @@ namespace PAV
 
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
-
             string nombre = txtNombre.Text.Trim();
             string apellido = txtApellido.Text.Trim();
             string telefono = txtTelefono.Text.Trim();
@@ -51,14 +52,12 @@ namespace PAV
 
                 if (existeEnLaBD)
                 {
-                    lblErrorRegistrarCliente.Text = "El cliente ya está registrado. Inicie sesión o recupere su contraseña.";
-                    lblErrorRegistrarCliente.Visible = true;
+                    MostrarError(lblErrorRegistrarCliente, "El cliente ya está registrado.", true);
+                    LimpiarCampos();
                 }
                 else
                 {
-                    // crear cliente
-                    // registrar cliente en al BD
-                    
+                    //AltaCliente();
                     var principalCliente = new FrmPrincipal();
                     principalCliente.Show();
                     this.Close();
@@ -66,10 +65,15 @@ namespace PAV
             }
             else
             {
-                //otro  error podria ser que ya exista en la BD
-                lblErrorRegistrarCliente.Text = "Completa todos los datos para registrarte.";
-                lblErrorRegistrarCliente.Visible = true;
+                MostrarError(lblErrorRegistrarCliente, "Completa todos los datos para registrarte.", true);
             }
+        }
+
+        private void AltaCliente(string nombre, string apellido, string telefono, string ciudad) 
+        { 
+            var sql = $"INSERT INTO Clientes (nombre, apellido, telefono, ciudad)" +
+                $"VALUES ('{nombre}', '{apellido}', '{telefono}', '{ciudad}')";
+            var res = DBHelper.GetDBHelper().EjecutarSQL(sql);
         }
 
         private bool ExisteEnLaBD(string nombre, string apellido, string telefono, string ciudad, string pais)
@@ -81,7 +85,48 @@ namespace PAV
 
         private void RegistrarCliente_Load(object sender, EventArgs e)
         {
-            // txtMail.Text = Usuario.email;
+            CargarComboBox(cmbCiudad, "Ciudades");
+            CargarComboBox(cmbPais, "Paises");
+        }
+
+        private void CargarComboBox(Guna2ComboBox combo, string nomTabla)
+        {
+            var sql = $"SELECT nombre FROM {nomTabla}";
+            var res = DBHelper.GetDBHelper().ConsultaSQL(sql);
+            foreach (DataRow fila in res.Rows) 
+            { 
+                combo.Items.Add(fila["nombre"]); 
+            }
+        }
+
+        private void FiltrarComboBoxCiudad(Guna2ComboBox combo) 
+        {
+            var sql = $"SELECT c.nombre FROM Paises p JOIN Ciudades c ON c.cod_pais = p.id_pais";
+            var res = DBHelper.GetDBHelper().ConsultaSQL(sql);
+            foreach (DataRow fila in res.Rows)
+            {
+                combo.Items.Add(fila["nombre"]);
+            }
+        }
+
+        private void MostrarError(Guna2HtmlLabel lbl, string mensaje, bool mostrar)
+        {
+            lbl.Visible = mostrar;
+            lbl.Text = mensaje;
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtTelefono.Clear();
+            cmbCiudad.SelectedIndex = -1;
+            cmbPais.SelectedIndex = -1;
+        }
+
+        private void cmbPais_SelectedValueChanged(object sender, EventArgs e)
+        {
+            FiltrarComboBoxCiudad(cmbCiudad);
         }
     }
 }
